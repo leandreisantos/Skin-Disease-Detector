@@ -27,6 +27,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
+                app:layout_constraintRight_toRightOf="parent"
                 android:textSize="25sp"
                 android:fontFamily="sans-serif"
                 android:textStyle="bold"/>
@@ -45,26 +46,13 @@
                 app:lottie_autoPlay="true" />
 
 
-            <TextView
-                android:id="@+id/about"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/about"
-                android:textAlignment="textStart"
-                app:layout_constraintTop_toBottomOf="@id/loginlot"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:fontFamily="sans-serif-light"/>
-
 
             <TextView
                 android:id="@+id/btn_detect"
-                android:layout_width="150dp"
+                android:layout_width="250dp"
                 android:layout_height="50dp"
-                android:background="@android:color/black"
-                app:layout_constraintTop_toBottomOf="@id/about"
+                android:background="@drawable/bg_input_login"
+                app:layout_constraintTop_toBottomOf="@id/loginlot"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:text="Detect Now"
@@ -72,6 +60,35 @@
                 android:layout_marginTop="50dp"
                 android:gravity="center"
                 android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/btn_about"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_login"
+                app:layout_constraintTop_toBottomOf="@id/btn_detect"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="About"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/btn_exit"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_login"
+                app:layout_constraintTop_toBottomOf="@id/btn_about"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="Exit"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

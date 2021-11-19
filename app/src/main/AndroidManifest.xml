@@ -16,7 +16,10 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectedItemActivity"></activity>
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+        <activity android:name=".SelectedItemActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>

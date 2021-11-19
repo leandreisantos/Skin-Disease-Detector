@@ -1,3 +1,5 @@
-Abscess
-Acanthosis Nigricans
-Acne
+0 Abscess
+1 Acanthosis
+2 Acne
+3 Eczema
+4 Peeling

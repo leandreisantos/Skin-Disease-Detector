@@ -325,7 +325,8 @@ public abstract class Classifier {
     }
 
     final ArrayList<Recognition> recognitions = new ArrayList<>();
-    int recognitionsSize = Math.min(pq.size(), MAX_RESULTS);
+//    int recognitionsSize = Math.min(pq.size(), MAX_RESULTS);
+    int recognitionsSize = 5;
     for (int i = 0; i < recognitionsSize; ++i) {
       recognitions.add(pq.poll());
     }

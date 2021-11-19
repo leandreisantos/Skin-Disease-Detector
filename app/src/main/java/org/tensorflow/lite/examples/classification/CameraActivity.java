@@ -92,7 +92,8 @@ public abstract class CameraActivity extends AppCompatActivity
       recognition2TextView,
       recognitionValueTextView,
       recognition1ValueTextView,
-      recognition2ValueTextView;
+      recognition2ValueTextView,
+      recognition3TextView,recognition3ValueTextView,recognition4ValueTextView,recognition4TextView;
   protected TextView frameValueTextView,
       cropValueTextView,
       cameraResolutionTextView,
@@ -191,7 +192,10 @@ public abstract class CameraActivity extends AppCompatActivity
     recognition1ValueTextView = findViewById(R.id.detected_item1_value);
     recognition2TextView = findViewById(R.id.detected_item2);
     recognition2ValueTextView = findViewById(R.id.detected_item2_value);
-
+    recognition3TextView = findViewById(R.id.detected_item3);
+    recognition3ValueTextView = findViewById(R.id.detected_item3_value);
+    recognition4TextView = findViewById(R.id.detected_item4);
+    recognition4ValueTextView = findViewById(R.id.detected_item4_value);
     frameValueTextView = findViewById(R.id.frame_info);
     cropValueTextView = findViewById(R.id.crop_info);
     cameraResolutionTextView = findViewById(R.id.view_info);
@@ -569,16 +573,24 @@ boolean hun = false;
   @UiThread
   protected void showResultsInBottomSheet(List<Recognition> results) {
 
-    if (results != null && results.size() >= 3) {
+    if (results != null && results.size() >= 5) {
+      //Toast.makeText(CameraActivity.this, Integer.toString(results.size()), Toast.LENGTH_SHORT).show();
       Recognition recognition = results.get(0);
       if (recognition != null) {
         if (recognition.getTitle() != null) {
           recognitionTextView.setText(recognition.getTitle());
-          if(recognition.getTitle().equals("Acanthosis Nigricans")){
-              recognitionkey = "1";
-          }else if(recognition.getTitle().equals("Abscess")){
-             recognitionkey = "2";
-          }else if(recognition.getTitle().equals("Acne")){
+          if(recognition.getTitle().equals("0 Abscess")){
+              recognitionkey = "0";
+          }else if(recognition.getTitle().equals("1 Acanthosis")){
+             recognitionkey = "1";
+          }else if(recognition.getTitle().equals("2 Acne")){
+            recognitionkey = "2";
+          }else if(recognition.getTitle().equals("3 Eczema")){
+            recognitionkey = "3";
+          }else if(recognition.getTitle().equals("4 Peeling")){
+            recognitionkey = "4";
+          }
+          else{
             recognitionkey = "3";
           }
         }
@@ -622,6 +634,20 @@ boolean hun = false;
         if (recognition2.getConfidence() != null)
           recognition2ValueTextView.setText(
               String.format("%.2f", (100 * recognition2.getConfidence())) + "%");
+      }
+      Recognition recognition3 = results.get(3);
+      if (recognition3 != null) {
+        if (recognition3.getTitle() != null) recognition3TextView.setText(recognition3.getTitle());
+        if (recognition3.getConfidence() != null)
+          recognition3ValueTextView.setText(
+                  String.format("%.2f", (100 * recognition3.getConfidence())) + "%");
+      }
+      Recognition recognition4 = results.get(4);
+      if (recognition4 != null) {
+        if (recognition4.getTitle() != null) recognition4TextView.setText(recognition4.getTitle());
+        if (recognition4.getConfidence() != null)
+          recognition4ValueTextView.setText(
+                  String.format("%.2f", (100 * recognition4.getConfidence())) + "%");
       }
     }
   }
