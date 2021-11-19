@@ -228,6 +228,12 @@ public abstract class CameraActivity extends AppCompatActivity
     return rgbBytes;
   }
 
+  @Override
+  public void onBackPressed() {
+    Intent intent = new Intent(CameraActivity.this,HomeActivity.class);
+    startActivity(intent);
+  }
+
   protected int getLuminanceStride() {
     return yRowStride;
   }

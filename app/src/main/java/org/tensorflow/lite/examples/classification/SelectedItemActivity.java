@@ -46,6 +46,7 @@ public class SelectedItemActivity extends AppCompatActivity {
         super.onStart();
 
         if(recognitionkey.equals("0")){
+            iv.setImageResource(R.drawable.abs);
             title.setText("Abscess");
             desc.setText("A skin abscess is a tender mass generally surrounded by a colored area from pink to deep red. Abscesses are often easy to feel by touching. The vast majority of them are caused by infections. Inside, they are full of pus, bacteria and debris. Painful and warm to touch, abscesses can show up any place on your body. The most common sites on the skin in your armpits (axillae), areas around your anus and vagina (Bartholin gland abscess), the base of your spine (pilonidal abscess), around a tooth (dental abscess), and in your groin. Inflammation around a hair follicle can also lead to the formation of an abscess, which is called a boil (furuncle). Unlike other infections, antibiotics alone will not usually cure an abscess. In general an abscess must open and drain in order for it to improve. Sometimes draining occurs on its own, but generally it must " +
                     "be opened with the help of a warm compress or by a doctor in a procedure called incision and drainage (I&D).");
@@ -69,6 +70,7 @@ public class SelectedItemActivity extends AppCompatActivity {
             lbl_prevent.setText("Can Abscess   Be Prevented?");
         }
         else if(recognitionkey.equals("1")){
+            iv.setImageResource(R.drawable.acan);
             title.setText("Acanthosis Nigricans");
             desc.setText("Acanthosis nigricans can affect otherwise healthy people, or it can be associated with certain medical conditions. Sometimes acanthosis nigricans is congenital (something a person is born with). It also can occur as a result of obesity or an endocrine (glandular) disorder. It is frequently found in obese people with diabetes or a tendency towards diabetes and is most common among people of " +
                     "African descent. There are many other possible causes of acanthosis nigricans, including:");
@@ -84,6 +86,7 @@ public class SelectedItemActivity extends AppCompatActivity {
                     "Other preventive strategies include treating medical problems that are linked to acanthosis nigricans (such as hypothyroidism) and avoiding medications that tend to cause or worsen the condition (like birth control pills).");
         }
         else if(recognitionkey.equals("2")){
+            iv.setImageResource(R.drawable.ac);
             title.setText("Acne");
             desc.setText("There's a reason it's called \"common acne\" -- nearly everyone suffers from a pimple outbreak at some point in life.\n" +
                     "\n" +
@@ -125,6 +128,7 @@ public class SelectedItemActivity extends AppCompatActivity {
         }
 
         else if(recognitionkey.equals("3")){
+            iv.setImageResource(R.drawable.ec);
             title.setText("Eczema");
             desc.setText("Eczema symptoms include itchy, red, and dry skin caused by inflammation. It’s most commonly found in children, although adults can get it. It is also called atopic dermatitis and is treated with oral medications, steroid creams and light therapy .");
             causes.setText("Eczema (atopic dermatitis) is caused by a combination of immune system activation, genetics, environmental triggers and stress. Your immune system. If you have eczema, your immune system overreacts to small irritants or allergens. This overreaction can inflame your skin.");
@@ -140,6 +144,7 @@ public class SelectedItemActivity extends AppCompatActivity {
             lbl_prevent.setText("Can Eczema Be Prevented?");
         }
         else if(recognitionkey.equals("4")){
+            iv.setImageResource(R.drawable.peel);
             title.setText("Peeling Skin");
             desc.setText("Peeling skin is unintended damage to and loss of the upper layer of your skin (epidermis). Peeling skin may occur because of direct damage to the skin, such as from sunburn or infection. It may also be a sign of an immune system disorder or other disease.");
             causes.setText("Your skin is regularly exposed to environmental elements that can irritate and damage it. These include sun, wind, heat, dryness and excessive humidity. Repeated irritation can lead to skin peeling. In babies born past their due date, it's not unusual for them to experience some painless skin peeling.\n" +
